@@ -156,6 +156,7 @@ function setToNow() {
 			:disabled="disabled"
 			class="calendar"
 			fixed-weeks
+			:locale="userStore.language"
 			weekday-format="short"
 			:dir="isRTL ? 'rtl' : 'ltr'"
 			@update:model-value="handleDateChange"

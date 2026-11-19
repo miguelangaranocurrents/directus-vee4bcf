@@ -170,10 +170,8 @@ export const useFieldDetailStore = defineStore({
 
 					if (get(updates, 'relations.m2o.related_collection') === 'directus_files') {
 						if (currentType === 'm2o') targetType = 'file';
-						if (currentType === 'm2m') targetType = 'files';
 					} else {
 						if (currentType === 'file') targetType = 'm2o';
-						if (currentType === 'files') targetType = 'm2m';
 					}
 
 					if (currentType !== targetType) {

@@ -44,3 +44,8 @@
 		fill: var(--tooltip-background-color);
 	}
 }
+
+/* The popper wrapper reka-ui adds around the content must not block clicks on elements beneath the tooltip */
+[data-reka-popper-content-wrapper]:has(> .tooltip) {
+	pointer-events: none;
+}
